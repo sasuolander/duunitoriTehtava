@@ -21,13 +21,13 @@ $(function() {
       `<p>mediaani: ${data["median"]}</p><p>keskiarvo: ${data["average"]}</p>`
     );
 
-    const ReadTimeToOpen = document
-      .getElementById("ReadTimeToOpen")
+    const pageViewToOpenTime = document
+      .getElementById("readTimeToOpen")
       .getContext("2d");
-    const ClikTimeToOpen = document
-      .getElementById("ClikTimeToOpen")
+    const clikToOpenTime = document
+      .getElementById("clikToOpenTime")
       .getContext("2d");
-    const ReadTimeToOpenChart = new Chart(ReadTimeToOpen, {
+    var pageViewToOpenTimeChart = new Chart(pageViewToOpenTime, {
       type: "line",
       data: {
         labels: data["graph"]
@@ -61,7 +61,7 @@ $(function() {
         }
       }
     });
-    const ClikTimeToOpenChart = new Chart(ClikTimeToOpen, {
+    var clikToOpenTimeChart = new Chart(clikToOpenTime, {
       type: "line",
       data: {
         labels: data["graph"]
