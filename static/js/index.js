@@ -17,6 +17,19 @@ $(function() {
         return item.timeOfOpen;
       })
     );
+
+    const maxValueX = Math.max.apply(
+      Math,
+      data["graph"].map(function(item) {
+        return item.pageView;
+      })
+    );
+    const minValueX = Math.min.apply(
+      Math,
+      data["graph"].map(function(item) {
+        return item.pageView;
+      })
+    );
     $("#result").append(
       `<p>mediaani: ${data["median"]}</p><p>keskiarvo: ${data["average"]}</p>`
     );
@@ -57,7 +70,17 @@ $(function() {
                 beginAtZero: true
               }
             }
-          ]
+          ],
+           xAxes: [
+            {
+              ticks: {
+                maxTicksLimit:20
+                //min: minValueX,
+                //max: maxValueX,
+                //beginAtZero: false
+              }
+            }
+          ] 
         }
       }
     });
@@ -88,10 +111,21 @@ $(function() {
             {
               ticks: {
                 min: minValueY,
-                max: maxValueY
+                max: maxValueY,
+                beginAtZero: true
               }
             }
-          ]
+          ],
+            xAxes: [
+            {
+              ticks: {
+                maxTicksLimit:5
+               // min: minValueX,
+              //  max: maxValueX,
+                //beginAtZero: false
+              }
+            }
+          ] 
         }
       }
     });
