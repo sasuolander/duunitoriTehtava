@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <title>Duunitori Backend Developer Trainee</title>
+  <style>
+    .async-hide {
+      opacity: 0 !important
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Duunitori">
+  <meta name="referrer" content="origin" />
+  <meta property="fb:app_id" content="138663486206556" />
+  <meta property="og:site_name" content="Duunitori.fi" />
+  <meta property="fb:pages" content="151086361568628" />
+  <meta property="fb:pages" content="541660599359207" />
+  <meta name="msvalidate.01" content="EFA02C8EDA6367F7E5C8ED23B883A240" />
+  <meta name="robots" content="noindex">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="{{ url_for('static', filename="js/jquery.min.js")}}"></script>
+  <script src="{{ url_for('static', filename="js/Chart.bundle.min.js")}}"></script>
+  <script src="{{ url_for('static', filename="js/index.js")}}"></script>
+  <style media="screen">
+    .cursor_blink {
+      font-size: 20px;
+      padding-right: 20px;
+      display: inline-block;
+    }
+
+    .cursor_blink:after {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: black;
+      opacity: 0;
+      display: inline-block;
+      animation: blink 1s linear infinite alternate;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <link rel="apple-touch-icon" href="https://skyhood-duunitori5.s3.amazonaws.com/static/images/duunitori_square.png" />
+  <link rel="icon" type="image/png"
+    href="https://skyhood-duunitori5.s3.amazonaws.com/static/images/duunitori_favicon.png" />
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Duunitori Haku">
+
+  <link rel="stylesheet" href="https://skyhood-duunitori5.s3.amazonaws.com/static/css/jquery-ui.min.css" media="none"
+    onload="if(media!='all')media='all'"><noscript>
+    <link rel="stylesheet" href="https://skyhood-duunitori5.s3.amazonaws.com/static/css/jquery-ui.min.css"></noscript>
+  <link rel="stylesheet" href="https://skyhood-duunitori5.s3.amazonaws.com/static/web/css/main-f2f6279146.css"
+    media="none" onload="if(media!='all')media='all'"><noscript>
+    <link rel="stylesheet" href="https://skyhood-duunitori5.s3.amazonaws.com/static/web/css/main.css?v=131118v2">
+  </noscript>
+</head>
+<body class="notouch">
+  <div id="fb-root"></div>
+  <script async defer
+    src="https://connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v3.2&appId=138663486206556&autoLogAppEvents=1">
+  </script>
+  <header>
+    <h1 class="heading__big--center">Backend Developer Trainee – ennakkotehtävä</h1>
+  </header>
+  <div class="grid-container">
+    <div class="grid grid--center">
+      <div class="1/1 3/4--desk grid__cell">
+        <div class="grid-sandbox grid-sandbox--extraspace">
+          <h2 class="heading__big">Huippua, että pääsit tänne asti!</h2>
+          <p>Nyt me halutaan pikkusen testata sua, koska koodaustaidothan ne on A ja O tässä pestissä!</p>
+          <ol>
+            <li><strong>Kopioi!</strong></li>
+            <p>Käytä 'hakkerointitaitojas' ja kopio tää sivu asumaan jonnekin omaan paikkaan, jonka voit myöhemmin
+              linkata meille.
+              Voit käyttää esimerkiksi Herokua, jolla mahdollista luoda oma app (esimerkki: <a target="_blank"
+                href="https://duunitori-trainee.herokuapp.com/">https://duunitori-trainee.herokuapp.com/</a>).
+              Joku muu sun lempparipalvelu, mikä? Käytä vapaasti jotain muuta palvelua, mutta muista perustella meille,
+              mikä on hyvää siinä palvelussa.</p>
+            <li><strong>GitHub</strong></li>
+            <p>Me rakastetaan GitHubia ja se on yks tärkeimmistä työkaluista meidän ohjelmistokehitysprojekteissa ja
+              versionhallinnassa. Toivotaan siis myös, että koodi, jota tuotat tässä
+              ennakkotehtävässä tulis löytymään joko GitHubista tai vaihtoehtosesti voit myös käyttää esim Bitbucket tai
+              vastaavaa.</p>
+            <li><strong>Let's code</strong></li>
+            <p>Alla on tehtävä ja tarkempi ohjeistus. Datasetin tehtäviin saat ladattua <a
+                href="https://skyhood-duunitori5.s3.eu-central-1.amazonaws.com/rekry/jobentry_export_2019-8-23T9_59.csv">täältä</a>.
+            </p>
+          </ol>
+          <p>Jos kysymyksiä herää missään vaiheessa, voit aina olla yhteydessä Hetaan (<a
+              href="mailto:heta@duunitori.fi">heta@duunitori.fi</a> / <a target="_blank"
+              href="https://www.linkedin.com/in/heta/">LinkedIn</a> / <a target="_blank"
+              href="https://www.facebook.com/heta.parssinen">Facebook</a> / <a
+              href="https://api.whatsapp.com/send?phone=358407597794&text=">WhatsApp</a> / <a href="tel:0407597794">040
+              759 7794</a>).</p>
+        </div>
+      </div>
+      <div class="1/1 3/4--desk grid__cell">
+        <div class="grid grid--center">
+          <div class="1/1 1/2--lap-and-up grid__cell">
+            <div class="grid-sandbox">
+              <img class="image__category"
+                src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/looking_for_job.svg"
+                alt="Duunitori työpaikat" title="Duunitori työpaikat">
+              <h2 class="heading__category">Datasetin käsittely</h2>
+              <div>
+                <p><strong>TODO:</strong></p>
+                <ul>
+                  <li>Käsittele datasetti ja laske, mikä on lukukertojen <strong>keskiarvo</strong> sekä
+                    <strong>mediaani</strong>.</li>
+                  <li>Vertaa lukukertoja sekä hakuklikkejä ajanjaksoon, jona työpaikkailmoitus on ollut auki. Visualisoi
+                    tämä alla olevaan kaavioon "Esimerkki visualisoitu data".</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="1/1 1/2--lap-and-up grid__cell">
+            <div class="grid-sandbox">
+              <img class="image__category"
+                src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/illustration_companies.svg"
+                alt="Duunitori työpaikat" title="Duunitori työpaikat">
+              <h2 class="heading__category">Listaa vastaukset esimerkiksi tähän</h2>
+              <h3>Lukukertojen:</h3>
+              <div id="result">
+              </div>
+              <span class="cursor_blink"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="1/1 3/4--desk grid__cell">
+        <div class="grid-sandbox grid-sandbox--extraspace">
+          <div class="grid">
+            <div class="1/1 grid__cell">
+              <h2 class="heading__big">Esimerkki visualisoitu data</h2>
+              <p>Chart on luotu käyttäen <a href="https://www.chartjs.org/">Chartjs</a> kirjastoa.
+                Jos jokin muu kirjasto on sinulle tutumpi, voit vapaasti valita myös jonkin toisen!</p>
+              <canvas id="ReadTimeToOpen" width="400" height="400"></canvas>
+              <br>
+              <canvas id="ClikTimeToOpen" width="400" height="400"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="1/1 3/4--desk grid__cell">
+        <div class="grid-sandbox grid-sandbox--extraspace">
+          <div class="grid">
+            <div class="1/1 3/4--lap-and-up grid__cell">
+              <h2 class="heading__big">Mahtavaa, kiitos paljon!</h2>
+              <p><strong>Seuraavat askeleet:</strong></p>
+              <ul>
+                <li>Kun olet julkaissut tehtävän, jaa linkki meille!</li>
+                <li>Kutsumme tehtävän perusteella osan hakijoista haastatteluun, olemme yhteyksissä sinuun viimeistään
+                  viikon kuluessa tehtävän suorittamisesta.</li>
+              </ul>
+              <p>Jos haluat lisätä palautetta tai kommentoida koodiasi, feel free!</p>
+              <p>Tee se vaikka suoraan tähän: <span class="cursor_blink"></span></p>
+
+              <h2>Python flask API</h2>
+             <div><a href="/api/stats">Linkki API</a></div>
+            </div>
+            <div class="1/1 1/4--lap-and-up grid__cell">
+              <img class="image__category"
+                src="https://skyhood-duunitori5.s3.amazonaws.com/static/images/looking_for_candidate.svg"
+                alt="Duunitori työpaikat" title="Duunitori työpaikat">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Source Sans Pro:400,400i,600,700']
+      }
+    });
+  </script>
+</body>
+</html>
