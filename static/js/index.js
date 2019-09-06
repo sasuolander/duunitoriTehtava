@@ -18,18 +18,6 @@ $(function() {
       })
     );
 
-    const maxValueX = Math.max.apply(
-      Math,
-      data["graph"].map(function(item) {
-        return item.pageView;
-      })
-    );
-    const minValueX = Math.min.apply(
-      Math,
-      data["graph"].map(function(item) {
-        return item.pageView;
-      })
-    );
     $("#result").append(
       `<p>mediaani: ${data["median"]}</p><p>keskiarvo: ${data["average"]}</p>`
     );
@@ -71,16 +59,13 @@ $(function() {
               }
             }
           ],
-           xAxes: [
+          xAxes: [
             {
               ticks: {
-                maxTicksLimit:20
-                //min: minValueX,
-                //max: maxValueX,
-                //beginAtZero: false
+                maxTicksLimit: 30
               }
             }
-          ] 
+          ]
         }
       }
     });
@@ -98,7 +83,6 @@ $(function() {
             data: data["graph"].map(function(item) {
               return item.timeOfOpen;
             }),
-
             backgroundColor: "rgba(0, 196, 177, 0.2)",
             borderColor: "rgb(0, 196, 177)",
             borderWidth: 1
@@ -116,16 +100,13 @@ $(function() {
               }
             }
           ],
-            xAxes: [
+          xAxes: [
             {
               ticks: {
-                maxTicksLimit:5
-               // min: minValueX,
-              //  max: maxValueX,
-                //beginAtZero: false
+                maxTicksLimit: 35
               }
             }
-          ] 
+          ]
         }
       }
     });
