@@ -40,7 +40,7 @@ def readingTimeToClick():
 
 @app.route("/api/stats")
 def statsController():
-    return jsonify(status="success",stats={"median":median(),"average":average(),"readingTimeToClick":readingTimeToClick()})
+    return jsonify(status="success",stats={"median":median(),"average":average(),"graph":readingTimeToClick()})
 
 @app.route("/")
 def homeController():

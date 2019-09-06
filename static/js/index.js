@@ -7,13 +7,13 @@ $(function() {
     const data = response.data.stats;
     const maxValueY = Math.max.apply(
       Math,
-      data["readingTimeToClick"].map(function(item) {
+      data["graph"].map(function(item) {
         return item.timeOfOpen;
       })
     );
     const minValueY = Math.min.apply(
       Math,
-      data["readingTimeToClick"].map(function(item) {
+      data["graph"].map(function(item) {
         return item.timeOfOpen;
       })
     );
@@ -30,7 +30,7 @@ $(function() {
     const ReadTimeToOpenChart = new Chart(ReadTimeToOpen, {
       type: "line",
       data: {
-        labels: data["readingTimeToClick"]
+        labels: data["graph"]
           .map(function(item) {
             return item.pageView;
           })
@@ -38,7 +38,7 @@ $(function() {
         datasets: [
           {
             label: "Lukukerrat / Päivää auki",
-            data: data["readingTimeToClick"].map(function(item) {
+            data: data["graph"].map(function(item) {
               return item.timeOfOpen;
             }),
             backgroundColor: "rgba(0, 196, 177, 0.2)",
@@ -64,7 +64,7 @@ $(function() {
     const ClikTimeToOpenChart = new Chart(ClikTimeToOpen, {
       type: "line",
       data: {
-        labels: data["readingTimeToClick"]
+        labels: data["graph"]
           .map(function(item) {
             return item.click;
           })
@@ -72,7 +72,7 @@ $(function() {
         datasets: [
           {
             label: "Hakuklikkejä / Päivää auki",
-            data: data["readingTimeToClick"].map(function(item) {
+            data: data["graph"].map(function(item) {
               return item.timeOfOpen;
             }),
 
